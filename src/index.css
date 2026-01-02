@@ -1,35 +1,56 @@
-/* Global resets */
+/* --------------------------------------------------
+   Global Reset
+-------------------------------------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Global font + dark theme base */
+/* --------------------------------------------------
+   Global Theme + Typography
+-------------------------------------------------- */
 :root {
-  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.7;
   font-weight: 400;
 
+  /* Modern dark gradient background */
+  background: linear-gradient(135deg, #1a1a1a, #111);
   color: #f2f2f2;
-  background-color: #1a1a1a;
 
+  /* Smoother text rendering */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Body layout */
+/* --------------------------------------------------
+   Body Layout
+-------------------------------------------------- */
 body {
   min-width: 320px;
   min-height: 100vh;
+
   display: flex;
   justify-content: center;
   align-items: flex-start;
+
   padding: 2rem;
+
+  /* Matches App.css card blur aesthetic */
+  backdrop-filter: blur(4px);
 }
 
-/* Remove default link styling */
+/* --------------------------------------------------
+   Links
+-------------------------------------------------- */
 a {
   color: inherit;
   text-decoration: none;
+  transition: opacity 0.2s ease;
 }
+
+a:hover {
+  opacity: 0.8;
+}
+
